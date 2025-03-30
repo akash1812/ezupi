@@ -18,6 +18,7 @@ function App() {
     setQrCodeUrl(qrAPI);
     setIsModalOpen(true);
   };
+  
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black p-5">
@@ -27,7 +28,8 @@ function App() {
       </h2>
       <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
       Generate Dynamic QR Code for your store or events <br />
-      Save 2% transaction fee
+      Save 2% transaction fee <br />
+      Unlock more possibilites
       </p>
     </BackgroundLines>
       <h2 className="text-2xl font-bold mb-6">Generate UPI QR Code</h2>
@@ -66,7 +68,9 @@ function App() {
             onChange={(e) => setAmount(e.target.value)}
             required
             placeholder="199"
+            min={1}
           />
+          
         </div>
         {/* <div className="mb-4">
           <label className="block text-gray-700">Currency:</label>
@@ -101,6 +105,11 @@ function App() {
           </div>
         </div>
       )}
+      <footer>
+        <div className="text-white">
+          Built with ♥ by Akash
+        </div>
+      </footer>
     </div>
   );
 }
